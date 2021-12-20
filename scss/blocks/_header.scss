@@ -1,0 +1,75 @@
+.header {
+  padding: 16px 0;
+  background-color: $white-color;
+  border-bottom: 1.5px solid #dbdbdb;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &__sec {
+    @include flex;
+    justify-content: space-between;
+  }
+
+  &__logo-img {
+    width: 123px;
+  }
+
+  &__form {
+    min-width: 125px;
+    width: 268px;
+    height: 36px;
+  }
+
+  &__search-inp {
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: rgba(var(--bb2,239,239,239),1);
+    font-size: 16px;
+    padding: 0 16px;
+    outline-color: rgba(var(--bb2,239,239,239),1);
+
+
+    &::placeholder {
+      font-size: 16px;
+      padding: 0 5px;
+      font-weight: 400;
+      color: rgba(var(--f52,142,142,142),1);
+      @include flex;
+    }
+  }
+
+  &__wrap {
+    @include flex;
+  }
+
+  &__btn {
+    width: 23px;
+    border: none;
+    margin: 0 0 0 20px;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  &__icon-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.avatar-btn {
+  border-radius: 50%;
+}
+
+@media screen and(max-width:690px) {
+  .header__form {
+    display: none;
+  }
+}
+@media screen and(max-width:450px) {
+  .header__btn {
+    margin: 0 0 0 10px;
+  }
+}
